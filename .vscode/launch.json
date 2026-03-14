@@ -5,7 +5,7 @@
             "name": "D: Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/c00_greetings_d_wsl_ubuntu_template",
+            "program": "${workspaceFolder}/${workspaceFolderBasename}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
