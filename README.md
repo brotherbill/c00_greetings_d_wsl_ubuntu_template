@@ -12,7 +12,7 @@ For this course, you will create and edit D projects exclusively using Visual St
 
 
 **Disclaimer:**
-Copilot was extensively used to help create this setup guide, but all of the projects are handcrafted. Copilot was used only for commentary, refactoring and aligning code, not for generating the actual project code.
+Copilot was extensively used to help create this setup guide.
 
 ## Step 1: Install WSL on Windows 11
 
