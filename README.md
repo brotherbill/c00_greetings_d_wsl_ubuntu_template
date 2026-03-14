@@ -196,3 +196,6 @@ Debugging is a powerful way to understand how your program works, line by line. 
    - Observe that **Greetings from D!** is displayed on the Terminal.
    - Press F5 to complete the program.
      - You may ignore the lines displayed to the Terminal.  These were printed by the environment outside your program.
+
+**Congratulations, your development environment for WSL - Ubuntu on Windows is complete**
+**You are ready to start learning D language, the old school way**
