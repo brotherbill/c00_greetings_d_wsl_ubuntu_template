@@ -8,9 +8,9 @@ This guide will walk you through setting up WSL, installing Ubuntu or Pop!_OS, a
 1. Open PowerShell as Administrator *(right-click Start, choose "Windows Terminal (Admin)")*.
    - **Check:** The terminal window title should say `Administrator: Windows PowerShell` if you started it as an admin. If it just says `Windows PowerShell`, you are **not** running as an administrator—close it and try again.
 2. Run `wsl --install`
-   - This command installs WSL.  (*It doesn't hurt to run it twice.  Reboot after each install*)
+   - This command installs WSL.  (*It doesn't hurt to run it many times.  Reboot after each install*)
      - This takes several minutes to run and is not chatty.
-     - If it states that it is corrupted, press any key to repair.
+     - If it states that it is corrupted, press any key to repair. (*you then have 60 seconds to press any key*)
 3. Restart the computer.
 4. Run again on Powershell as Administrator: `wsl --install`
 
@@ -52,26 +52,14 @@ wsl --install -d Ubuntu
 
 ---
 
-## Step 3: Support Copy/Paste between Windows and Ubuntu
-
-1. Open your web browser in Windows.
-2. Visit: https://code.visualstudio.com/
-3. Click the **Download for Windows** button and run the installer.
-4. Follow the setup wizard to complete installation (accept defaults unless you have a preference).
-5. After installation:
-   1. Launch **Visual Studio Code** (the installer does this by default).
-   2. Close your web browser.
-
-*Tip: You can pin VS Code to your taskbar for easy access.*
-
----
-
 ## Step 3: Install Visual Studio Code on Windows
 
 1. Open your web browser in Windows.
 2. Visit: https://code.visualstudio.com/
 3. Click the **Download for Windows** button and run the installer.
 4. Follow the setup wizard to complete installation (accept defaults unless you have a preference).
+   1. You may want to check **Create a desktop icon** to make it easy to open VS Code by double clicking its icon on the Desktop.
+
 5. After installation:
    1. Launch **Visual Studio Code** (the installer does this by default).
    2. Close your web browser.
@@ -90,13 +78,14 @@ wsl --install -d Ubuntu
 
 5. Fully close all VS Code windows.
 6. Open VS Code again from the Windows Start menu (not from inside WSL or a terminal).
-5. Press **Ctrl+Shift+P** to open the Command Palette, then type and select:
+7. Press **Ctrl+Shift+P** to open the Command Palette, then type and select:
    - **WSL: Connect to WSL**
-8. You should see: **>< WSL: Ubuntu** on the bottom-left of VS Code, with blue background.
-5. **If nothing appears or you get an error:**
-   - Make sure WSL and Ubuntu are installed and working (open a Windows terminal and run `wsl`).
-   - Restart your computer and try again.
-   - If the problem persists, check for Windows or VS Code updates.
+   - You should see: **>< WSL: Ubuntu** on the bottom-left of VS Code, with blue background.
+   - **If nothing appears or you get an error:**
+     - Make sure WSL and Ubuntu are installed and working (open a Windows terminal and run `wsl`).
+     - Restart your computer and try again.
+     - If the problem persists, check for Windows or VS Code updates.
+8. Leave VS Code up and running
 
 **VS Code is now running in Ubuntu**
 
@@ -123,18 +112,20 @@ wget https://dlang.org/install.sh -O - | bash
 ```
 echo 'source ~/dlang/dmd-*/activate' >> ~/.bashrc
 ```
-​	Close and reopen VS Code.
+3. Close and reopen VS Code.
 
 *This adds the activation command to your `.bashrc` profile, so the D environment will be set up automatically each time you open a new terminal.*
 
-3. You should now be able to run `dmd --version` to verify the installation.
-   1. It should have version 2.112.0 or higher.
-4. Close Terminal in VS Code.
+4. Open the VS Code Terminal.  
+   1. You should now be able to run `dmd --version` to verify the installation.
+   2. It should have version 2.112.0 or higher.
+
+5. Close Terminal in VS Code.
 
 ---
 
 
-## Step 6: Install D Language Extension in VS Code
+## Step 6: Install D Language Extensions in VS Code
 
 Install the following VS Code extensions to enable D language development and debugging:
 
@@ -159,7 +150,11 @@ If you have not already installed GDB (the GNU Debugger), you will need it for d
 
 ```bash
 sudo apt-get update && sudo apt-get install -y gdb
+
+sudo apt update && sudo apt install build-essential
 ```
+
+For second command, answer **Y** if prompted to continue.
 
 Debugging is a powerful way to understand how your program works, line by line. With the VS Code debugger, you can pause your program, inspect variables, and watch how each statement is executed. This is especially helpful for learning D, experimenting with code, as well as finding and fixing bugs.
 
@@ -191,13 +186,6 @@ Debugging is a powerful way to understand how your program works, line by line. 
         - Check: "Trust the authors of all files in the parent folder 'd' "
         - Click: "Yes, I trust the Authors" button
     
-3. Review the `.vscode/launch.json` file:
-    - The project already includes a pre-configured `launch.json` for debugging D programs with GDB.
-    - If you need to customize it, open `.vscode/launch.json` and edit as needed. The default configuration should work for the provided example.
-
-4. Build and debug your D program as described in the project’s README or in the next steps.
-   - **Tip:** If your program has a different name, change `greetings` to match your executable.
-
 4. **Set a Breakpoint**
    
    - In your D source file, click to the left of a line number where you want the program to pause. A red dot will appear (this is a breakpoint).
