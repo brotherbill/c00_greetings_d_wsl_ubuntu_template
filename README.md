@@ -1,6 +1,18 @@
-# WSL Ubuntu/Pop!_OS Setup Guide
 
-This guide will walk you through setting up WSL, installing Ubuntu or Pop!_OS, and configuring VS Code and D language development on a fresh Windows 11 device.
+# WSL Ubuntu Setup Guide
+
+
+**Preamble (WSL Ubuntu Users Only):**
+
+Installing WSL for Ubuntu does not install a full Virtual Machine (VM) for Ubuntu. Instead, it provides just enough of Ubuntu for you to use Visual Studio Code in "Ubuntu mode," giving you the power of VS Code to create and debug console applications with D language in a real Linux environment—without the overhead of a full VM.
+
+Alternatives include running a true VM (*such as with Oracle VirtualBox*) or purchasing a dedicated Linux machine running Ubuntu or Pop!_OS from a Linux hardware manufacturer like System76. However, using Oracle VirtualBox or other VMs is outside the scope of this course.
+
+For this course, you will create and edit D projects exclusively using Visual Studio Code in Ubuntu mode. Ubuntu graphical apps like Terminal and Files are not available; instead, use the integrated VS Code Terminal and Windows File Explorer for all development tasks.
+
+
+**Disclaimer:**
+Copilot was extensively used to help create this setup guide, but all of the projects are handcrafted. Copilot was used only for commentary, refactoring and aligning code, not for generating the actual project code.
 
 ## Step 1: Install WSL on Windows 11
 
