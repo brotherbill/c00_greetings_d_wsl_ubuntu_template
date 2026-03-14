@@ -32,10 +32,10 @@ wsl --install -d Ubuntu
 - This will download and install the latest Ubuntu distribution for WSL.
 - When installation completes, a new window will open to finish Ubuntu setup.
 
-   When Ubuntu setup starts, you'll be prompted to create a user account:
+   When Ubuntu setup starts, you'll be prompted to **create a user account**:
    - The prompt may say "Unix user account"—this is simply your Linux username.
-   - Choose a short, memorable username. This name will appear in your terminal prompt and take up space. For example, `bb` for Brother Bill.
-   - Enter a password when prompted. This password is used for administrative (sudo) commands.
+   - Choose a short, memorable **username**. This name will appear in your terminal prompt and take up space. For example, `bb` for Brother Bill.
+   - Enter a **password** when prompted. This password is used for administrative (sudo) commands.
      - A strong password has an Uppercase character, lowercase character, a digit and a punctuation character.
    - Then confirm the password by entering it again.
 
@@ -112,7 +112,7 @@ wget https://dlang.org/install.sh -O - | bash
 ```
 echo 'source ~/dlang/dmd-*/activate' >> ~/.bashrc
 ```
-3. Close and reopen VS Code.
+3. Close VS Code.
 
 *This adds the activation command to your `.bashrc` profile, so the D environment will be set up automatically each time you open a new terminal.*
 
@@ -162,10 +162,7 @@ Debugging is a powerful way to understand how your program works, line by line. 
 
 
 1. Clone the starter project repository:
-   ```bash
-   git clone https://github.com/brotherbill/c00_greetings_d_wsl_ubuntu_template.git
-   ```
-
+   
    Place the template and all your course projects in the directory `~/dev/d/` in your Ubuntu home folder. For example:
    ```bash
    mkdir -p ~/dev/d
@@ -181,61 +178,21 @@ Debugging is a powerful way to understand how your program works, line by line. 
    **Do not edit or delete this template folder.**
    
 2. Open the cloned folder in VS Code (Ubuntu):
-    - In VS Code, click File → Open Folder and select the `c00_greetings_d_wsl_ubuntu_template` directory.
+    - In VS Code, click File → Open Folder and select the `/home/bb/dev/d/c00_greetings_d_wsl_ubuntu_template/` directory.
       - If asked: "Do you trust the authors of the files in this folder?"
-        - Check: "Trust the authors of all files in the parent folder 'd' "
-        - Click: "Yes, I trust the Authors" button
+        - Check: **Trust the authors of all files in the parent folder 'd'** 
+        - Click: **Yes, I trust the Authors** button
     
 4. **Set a Breakpoint**
    
-   - In your D source file, click to the left of a line number where you want the program to pause. A red dot will appear (this is a breakpoint).
+   - In D source file `source/app.d`, click to the left of line number 7, where you want the program to pause. A red dot will appear (this is a breakpoint).
    
 5. **Start Debugging**
    
    - Press **F5** or click the green "Run and Debug" button at the top of the sidebar.
-   - The debugger will start, and your program will pause at the breakpoint. You can now inspect variables, step through code, and use the debug console.
-
-**Troubleshooting Tips:**
-
-- Make sure your D program is compiled with debug symbols (the default for dmd is fine).
-- If you see errors about missing GDB, install it in Ubuntu with:
-   ```bash
-   sudo apt update
-   
-   sudo apt install -y gdb
-   ```
-- If you have issues, double-check your launch.json file and make sure the program path matches your compiled D executable.
-
----
-
-## Step 8: Test Terminal I/O (stdin/stdout) in VS Code Ubuntu Terminal
-
-To ensure that interactive D programs work correctly in the VS Code (Ubuntu) terminal, follow these steps:
-
-1. Create a new D source file:
-   ```bash
-   nano echo_input.d
-   ```
-2. Paste the following code into nano:
-   ```d
-   import std.stdio;
-   
-   void main()
-   {
-       writeln("Enter your name:");
-       string name = stdin.readLine();
-       writeln("Hello, ", name, "!");
-   }
-   ```
-3. Save and exit nano *(press Ctrl+O, Enter, then Ctrl+X)*.
-4. Compile the program:
-   ```bash
-   dmd echo_input.d
-   ```
-5. Run the program:
-   ```bash
-   ./echo_input
-   ```
-6. When prompted, type your name and press Enter. You should see the greeting printed immediately.
-
-*If the program responds to your input without delay or buffering issues, your VS Code terminal is handling stdin and stdout correctly for D programs.*
+   - The debugger will start, and your program will pause at the breakpoint on line 7. You can now inspect variables, step through code, and use the debug console.
+   - Click on **Terminal** tab in bottom **Terminal** pane.
+   - Press F10 to advance to next line (*line 8*)
+   - Observe that **Greetings from D!** is displayed on the Terminal.
+   - Press F5 to complete the program.
+     - You may ignore the lines displayed to the Terminal.  These were printed by the environment outside your program.
