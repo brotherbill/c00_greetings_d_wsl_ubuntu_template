@@ -1,3 +1,21 @@
+## Cleaning Build Artifacts
+
+To remove the dub build folder and any c00_greetings_d_wsl_ubuntu_template executables or debug symbol files, use the provided clean.sh script:
+
+1. In the project folder, make sure the script is executable (already set):
+
+   ```bash
+   chmod +x clean.sh
+   ```
+
+
+2. Run the script:
+
+   ```bash
+   clean.sh
+   ```
+
+This will clean up build artifacts and binaries related to the template.
 # Welcome to the D Project Template (WSL Ubuntu/Windows)
 
 This is a template for D language projects designed for use with both WSL Ubuntu and Windows. This README serves as a quick guide to the documentation and resources in this folder.
