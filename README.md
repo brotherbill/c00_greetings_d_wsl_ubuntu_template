@@ -102,7 +102,7 @@ wsl --install -d Ubuntu
 ## Step 5: Install D Language Tools in Ubuntu (WSL)
 
 1. In VS Code, open the Terminal with **Terminal > New Terminal**
-1. In the VS Code terminal (connected to Ubuntu), run the following command to download and run the official D language installer:
+2. In the VS Code terminal (connected to Ubuntu), run the following command to download and run the official D language installer:
 
 ```
 wget https://dlang.org/install.sh -O - | bash
@@ -110,7 +110,7 @@ wget https://dlang.org/install.sh -O - | bash
 
 - This will download and run the D installer script. Follow the prompts to install the latest stable D compiler (usually just press Enter to accept defaults).
 
-2. When installation completes, activate D for your current terminal session:
+3. When installation completes, activate D for your current terminal session:
 
 *The `source` command runs the activate script in your current terminal, setting up environment variables so you can use the D compiler (`dmd`) and related tools right away.*
 
@@ -118,15 +118,15 @@ wget https://dlang.org/install.sh -O - | bash
 ```
 echo 'source ~/dlang/dmd-*/activate' >> ~/.bashrc
 ```
-3. Close VS Code.
+4. Close VS Code.
 
 *This adds the activation command to your `.bashrc` profile, so the D environment will be set up automatically each time you open a new terminal.*
 
-4. Open the VS Code Terminal.  
+5. Open the VS Code Terminal.  
    1. You should now be able to run `dmd --version` to verify the installation.
    2. It should have version 2.112.0 or higher.
 
-5. Close Terminal in VS Code.
+6. Close Terminal in VS Code.
 
 ---
 
