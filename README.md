@@ -6,6 +6,40 @@ This is a template for D language projects designed for use with both WSL Ubuntu
 > This template project should **not** be edited, deleted, or moved.
 > The `new_d_project.ps1` script depends on this folder and its contents being present in this exact location.
 > Always create new projects in a separate directory using the provided script.
+This template project should **not** be edited, deleted, or moved.
+Always create new projects in a separate directory using the provided Bash script.
+
+---
+
+## Creating a New D Project (WSL-Ubuntu)
+
+To create a new D project from this template, use the provided Bash scripts:
+
+1. In the template folder, run:
+
+   ```bash
+   bash setup_new_d_project_global.sh
+   ```
+
+   This will make the `new_d_project` command available globally (after restarting your terminal or running `source ~/.bashrc`).
+
+2. To create a new project, run:
+
+   ```bash
+   new_d_project <project_name> "<description>"
+   ```
+
+   Example:
+
+   ```bash
+   new_d_project my_new_project "My new D project for WSL Ubuntu"
+   ```
+
+   This will clone the template, update all references, and set your project description.
+
+---
+
+**Note:** The PowerShell scripts and their commentary have been removed. Use only the Bash scripts for project setup and creation in WSL-Ubuntu.
 
 ## Start Here
 
