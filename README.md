@@ -1,6 +1,26 @@
+# Welcome to the D Project Template (WSL Ubuntu/Windows)
+
+This is a template for D language projects designed for use with both WSL Ubuntu and Windows. This README serves as a quick guide to the documentation and resources in this folder.
+
+> **Important:**
+> This template project should **not** be edited, deleted, or moved.
+> The `new_d_project.ps1` script depends on this folder and its contents being present in this exact location.
+> Always create new projects in a separate directory using the provided script.
+
+## Start Here
+
+- **README_BEGINNER.md** — Step-by-step beginner guide for setting up, creating, running, and debugging D projects. Highly recommended for new users.
+- **README_EXPERT.md** — Concise expert guide for experienced users or those already familiar with D and VS Code.
+
+- **dub.json** — Project configuration for the D build tool (dub).
+- **dub.selections.json** — Dependency lock file for dub.
+
+- Always start with the Markdown (.md) files for documentation and setup help.
+- For troubleshooting or advanced usage, see the EXPERT guides.
+
+---
 
 # WSL Ubuntu Setup Guide
-
 
 **Preamble (WSL Ubuntu Users Only):**
 
