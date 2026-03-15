@@ -184,7 +184,7 @@ Debugging is a powerful way to understand how your program works, line by line. 
    **Do not edit or delete this template folder.**
    
 2. Open the cloned folder in VS Code (Ubuntu):
-    - In VS Code, click File → Open Folder and select the `/home/bb/dev/d/c00_greetings_d_wsl_ubuntu_template/` directory.
+    - In VS Code, click **File → Open Folder** and select the `/home/bb/dev/d/c00_greetings_d_wsl_ubuntu_template/` directory.
       - If asked: "Do you trust the authors of the files in this folder?"
         - Check: **Trust the authors of all files in the parent folder 'd'** 
         - Click: **Yes, I trust the Authors** button
