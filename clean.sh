@@ -1,6 +1,13 @@
 #!/bin/bash
 # clean.sh - Remove dub build folder and template executables/debug files
 
+
+# Remove .dub build folder
+if [ -d ".dub" ]; then
+    echo "Removing .dub/ directory..."
+    rm -rf .dub
+fi
+
 # Remove dub build folder
 if [ -d "dub" ]; then
     echo "Removing dub/ directory..."
