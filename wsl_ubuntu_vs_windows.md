@@ -43,18 +43,18 @@ This will launch a PowerShell session inside your WSL Ubuntu terminal, allowing 
 ```
 
 ## File System Access
-- **Windows** can access WSL files at: `\\wsl$\Ubuntu\home\<ubuntu-username>`
-- **WSL** can access Windows files at: `/mnt/c/Users/<windows-username>`
+- **Windows** can access **WSL** files at: `\\wsl$\Ubuntu\home\<ubuntu-username>`
+- **WSL** can access **Windows** files at: `/mnt/c/Users/<windows-username>`
 
 ## Notes
-- Use Windows tools for `.exe`, `.ps1`, `.bat` files.
-- Use WSL for Linux tools, `bash`, `apt`, etc.
+- Use **Windows** tools for `.exe`, `.ps1`, `.bat` files.
+- Use **WSL** for **Linux** tools, `bash`, `apt`, etc.
 - Paths and environment variables differ between Windows and WSL.
 
 ## How to Find Your Username
 
 ### Windows Username
-Open Command Prompt or PowerShell and run:
+Open **PowerShell** and run:
 ```powershell
 echo %USERNAME%
 ```
@@ -65,7 +65,7 @@ whoami
 This will display your Windows username.
 
 ### WSL (Ubuntu) Username
-Open your WSL (Ubuntu) terminal and run:
+Open your **WSL (Ubuntu)** terminal and run:
 ```bash
 whoami
 ```
@@ -73,4 +73,4 @@ or
 ```bash
 echo $USER
 ```
-This will display your Ubuntu (Linux) username.
+This will display your **Ubuntu (Linux)** username.

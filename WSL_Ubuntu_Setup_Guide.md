@@ -1,6 +1,6 @@
 # WSL Ubuntu Setup Guide
 
-This guide will walk you through setting up WSL for Ubuntu, installing Ubuntu and configuring VS Code and D Language development on a fresh Wnidows 11 device. (*This will also work for a mature development machine*)
+This guide will walk you through setting up **WSL** for **Ubuntu**, installing **Ubuntu** and configuring **VS Code** and **D** Language development on a fresh **Windows 11** device. (*This will also work for a mature development machine*)
 
 **Preamble**
 
@@ -18,7 +18,7 @@ Using **VS Code** and **PowerShell** provides an adequate environment to code an
       2. If it states that it is corrupted, press any key to repair.  (*You then have 60 seconds to press any key, but not the ENTER key*)
 3. Restart the computer
 4. Run `wsl --install` again
-   1. This does no harm, and does work
+   1. This does no harm, has no corruption message, and does work
 5. Restart the computer
    
 
@@ -50,73 +50,85 @@ Using **VS Code** and **PowerShell** provides an adequate environment to code an
 ## Step 4: Install WSL Extension and Connect to Ubuntu in VS Code
 
 1. Open **VS Code**
-2. Click the **Extensions** icon on the left sidebar (*or press Ctrl+Shift+X*)
-3. In the search box, type `wsl`
-4. Click on the extension named **WSL** (*by Microsoft*)
-5. Click either **Install** button
-6. Close all **VS Code** windows
-7. Open **VS Code** from the **Windows Start Menu**.
-8. Press **Ctrl+Shift+P** to open the Command Palette, then type and select **WSL: Connect to WSL**
-   1. You should see **>< WSL: Ubuntu** on the bottom-left of **VS Code**, with blue background
-9. Close **VS Code**.
+2. Close **Welcome** tab
+3. Click the **Extensions** icon on the left sidebar (*or press Ctrl+Shift+X*)
+4. In the search box, type `wsl`
+5. Click on the extension named **WSL** (*by Microsoft*)
+6. Click either **Install** button
+7. Close all **VS Code** windows
+8. Open **VS Code** from the **Windows Start Menu**.
+9. Close **Welcome** tab
+10. Press **Ctrl+Shift+P** to open the Command Palette, then type and select **WSL: Connect to WSL**
+    1. You should see **>< WSL: Ubuntu** on the bottom-left of **VS Code**, with blue background
+11. Close **VS Code**.
 
 ## Step 5: Install D Language Tools in Ubuntu (WSL)
 
 1. Open **VS Code**
-2. Open the **Terminal** with **Terminal > New Terminal**
-3. Run `wget https://dlang.org/install.sh -O - | bash`
-   1. This will download and run the **D** installer script.  Follow the prompts to install the latest stable **D** compiler  (*usually just press Enter to accept defaults*)
-4. Run `echo 'source ~/dlang/dmd-*/activate' >> ~/.bashrc`
-5. Close **VS Code**
-6. Open **VS Code**
-7. Open **Terminal**
-8. Run `dmd --version` to verify the installation
+2. Close **Welcome** tab
+3. Open the **Terminal** with **Terminal > New Terminal**
+4. Run `wget https://dlang.org/install.sh -O - | bash`
+   1. This will download and run the **D** installer script
+5. Run `echo 'source ~/dlang/dmd-*/activate' >> ~/.bashrc`
+6. Close **VS Code**
+7. Open **VS Code**
+8. Open **Terminal**
+9. Run `dmd --version` to verify the installation
    1. It should have version 2.112.0 or higher
-9. Close **VS Code**
+10. Close **VS Code**
 
 ## Step 6: Install D Language Extensions in VS Code
 
-1. Open **VS Code**
+1. Open **VS Code**, close **Welcome** tab
 2. Click **Extensions** icon on left sidebar
 3. Using the Search bar, install each of these VS Code extensions
    1. **code-d** (*by WebFreak*)
+      1. If asked **Do you trust publishers "WebFreak" and "Holger Benl"?**, click **Trust Publishers and Install** button
    2. **Native Debug** (*by WebFreak*)
    3. **C/C++** (*by Microsoft*)
 4. Close **VS Code**
 
-## Step 7: Setup and Test F5 Debugging for D in VS Code
+## Step 7: Setup for Debugging D Language in VS Code
 
-1. Open **VS Code**
+1. Open **VS Code**, close **Welcome** tab
 2. Open **Terminal**
 3. Run `sudo apt-get update && sudo apt-get install -y gdb`
 4. Run `sudo apt update && sudo apt install build-essential`
    1. Press Enter key (*for Yes*) if prompted to continue
 5. Run `sudo apt update`
 6. Run `sudo apt install -y gdb`
+7. Close **VS Code**
+
+## Step 8: Start with the Project Template
 
 Debugging is a powerful way to understand how your program works, line by line.
 With the VS Code debugger, you can pause your program, inspect variables, and watch how each statement is executed.  This is especially helpful for learning D, experimenting with code, as well as finding and fixing bugs.
 
-### Start with the Project Template
-
-1. Clone the starter project repository
-   1. Run `git clone`
-   2. Run `https://github.com/brotherbill/c00_greetings_d_wsl_ubuntu_template.git`
-2. Place the template and all your course projects in the directory `~/dev/d/` in your Ubuntu home folder.
+1. Open **VS Code**, close **Welcome** tab
+2. Open **Terminal**
+3. Clone the starter project repository
+   1. Run `git clone https://github.com/brotherbill/c00_greetings_d_wsl_ubuntu_template.git`
+      1. This is one line, even though it may wrap around
+4. Place the template and all your course projects in the directory `~/dev/d/` in your Ubuntu home folder.
    1. Run `mkdir -p ~/dev/d`
    2. Run `cd ~/dev/d`
    3. Run `git clone https://github.com/brotherbill/c00_greetings_d_wsl_ubuntu_template.git`
       1. This will create a folder named `c00_greetings_d_wsl_ubuntu_template` inside `~/dev/d/` with all the necessary files and configuration for **D** development and debugging.
-3. **Warning:**  This template is intended only for testing your **D** installation and as a base for creating new **D** language projects.  It provides a ready-to-use programming environment with debugging support, so you can avoid tedious setup steps.  **Do not edit or delete this template folder**.
-4. **File > Open Folder** and select **c00_greetings_d_wsl_ubuntu_template** folder
+5. **Warning:**  This template is intended only for testing your **D** installation and as a base for creating new **D** language projects.  It provides a ready-to-use programming environment with debugging support, so you can avoid tedious setup steps.  **Do not edit or delete this template folder**.
+6. **File > Open Folder** and select **/home/bb/dev/d/c00_greetings_d_wsl_ubuntu_template** folder
    1. If asked **Do you trust the authors of the files in this folder?**
       1. Check **Trust the authors of all files in the parent folder 'd'**
       2. Click **Yes, I trust the Authors** button
-5. **Set a breakpoint**
+7. Close **VS Code**
+
+## Step 9: Debug D with F5
+
+1. Open **VS Code**, close **Welcome** tab
+2. **Set a breakpoint**
    1. **Open source/app.d**
-   2. Click to the left of line 7 to set a breakpoint.
+   2. Click to the left of line 5 to set a breakpoint.
       1. A red dot will appear, which is the breakpoint.
-6. **Start Debugging**
+3. **Start Debugging**
    1. Press **F5** to start debugging
       1. The debugger will start, and your program will pause at the breakpoint.  You can now inspect variables, step through code and use the debug console.
 
