@@ -12,7 +12,7 @@ To remove the dub build folder and any c00_greetings_d_wsl_ubuntu_template execu
 2. Run the script:
 
    ```bash
-   clean.sh
+   ./clean.sh
    ```
 
 This will clean up build artifacts and binaries related to the template.
