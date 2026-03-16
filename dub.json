@@ -5,6 +5,6 @@
     "license": "MIT",
     "dependencies": {},
     "targetType": "executable",
-    "sourcePaths": ["."],
-    "mainSourceFile": "app.d"
+    "sourcePaths": ["source"],
+    "mainSourceFile": "source/app.d"
 }
