@@ -8,6 +8,20 @@ This guide will walk you through setting up **WSL** for **Ubuntu**, installing *
 
 Using **VS Code** and **PowerShell** provides an adequate environment to code and debug **D** projects in a **Linux Ubuntu** environment, where everything **just works**.
 
+## Step 0: About the instructor and the course 
+
+- This step is optional.  You may skip it if you are an experienced developer.  If you are a newbie, consider reading it in full.  It is fairly short.
+- I'm Brother Bill, your instructor on your path to learning D language.  FWIW, I am an old timer, cutting my teeth on punch cards and machine language programming on an IBM 1620 mini-computer back in 1970.  Since then I've worked for many companies and made many mistakes, some of which I learned something from.
+- The fact that you are taking this course, perhaps just the free parts, means that you don't need convincing as to why D language is worth learning and mastering.  You may find this easily with a browser search.
+- We want to get to running and debugging the traditional Greetings, World app as quickly as possible, and this installation video is designed to do just that.  Just enough narration to guide you to cover the steps needed to do this.
+- You don't need to know anything about the commands used in the installation.  Just blindly follow the instructions to the letter.  (*This is not the time for improvisation*)
+- Remember that although Windows is generally case ignorant, Ubuntu Linux is generally case sensitive, with certain exceptions such as URL names.
+  - Use copy and paste to avoid typos, and have a smooth voyage of this nine part installation series.
+    - Don't rush to press Enter after the copy/paste.
+    - Breathe and double check the spelling, then press Enter
+- You will notice that the videos are simply edited, mostly to get the captions right, the umm's removed, and that's about it.  If you are expecting a highly polished video with Power Point presentations, drawing animated red rectangles around highlighted code, background music and transitional effects, this is not the course for you.
+- Let's commence installing WSL on Windows 11, as this is necessary to be able to start coding and debugging D language projects in WSL (Ubuntu)
+
 ## Step 1: Install WSL on Windows 11
 
 1. Open **PowerShell** as **Administrator**
@@ -60,12 +74,12 @@ Using **VS Code** and **PowerShell** provides an adequate environment to code an
 9. Close **Welcome** tab
 10. Press **Ctrl+Shift+P** to open the Command Palette, then type and select **WSL: Connect to WSL**
     1. You should see **>< WSL: Ubuntu** on the bottom-left of **VS Code**, with blue background
+    1. You are now running **Ubuntu** inside **VS Code**
 11. Close **VS Code**.
 
 ## Step 5: Install D Language Tools in Ubuntu (WSL)
 
-1. Open **VS Code**
-2. Close **Welcome** tab
+1. Open **VS Code**, close **Welcome** tab
 3. Open the **Terminal** with **Terminal > New Terminal**
 4. Run `wget https://dlang.org/install.sh -O - | bash`
    1. This will download and run the **D** installer script
@@ -131,5 +145,6 @@ With the VS Code debugger, you can pause your program, inspect variables, and wa
 3. **Start Debugging**
    1. Press **F5** to start debugging
       1. The debugger will start, and your program will pause at the breakpoint.  You can now inspect variables, step through code and use the debug console.
+4. Close **VS Code**
 
 **Congratulations, your development environment is set up, and you may now start the main body of the course, learning D language**
