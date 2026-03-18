@@ -1,0 +1,45 @@
+## Disclaimer
+AI tools were used to help create and edit the documentation in this course. However, all coding examples and projects were hand-crafted by the instructor to ensure quality and authenticity.
+
+
+# How to Take This Course
+
+## 1. What Makes This Course Different
+This course is not your typical video tutorial. Instead of just watching code being typed, you’ll engage with a variety of resources and activities designed for true mastery of the D language fundamentals.
+
+- Most tutorials only scratch the surface. Here, you’ll go deep into D, with future modules planned for advanced topics and standard libraries.
+- All code is pre-written and ready to use—no time wasted on setup. You can focus on experimenting and learning by doing.
+- Lessons skip the usual intro-summary format. The focus is on teaching. If you want a summary, use AI tools to generate one, or read the summary in _Programming in D_ book.
+- You’ll see the good, the bad, and the ugly of D, so you can confidently read and maintain real-world code. The course is opinionated, drawing inspiration from Eiffel and classic programming principles, but always within D’s official style guidelines.
+- All projects are console apps—no web, mobile, or GUI distractions. The goal is to build a strong foundation.
+- You learn best by doing, not just watching. This course gives you everything you need to practice and explore D on your own terms.
+- Don’t expect fancy prose—expect in-depth, practical D knowledge.
+- Once I complete building the course, AI-powered search and Q&A will help you find exactly the lesson or example you need.
+
+## 2. Choosing Your Development Environment
+You have several options for setting up your environment:
+
+1. **Windows 11 only** (not recommended):
+   - Pure Windows, but with major drawbacks: poor Unicode support in the terminal, linker issues with some libraries, and slow performance.
+2. **Windows 11 with WSL (Ubuntu)** (recommended):
+   - Combines the convenience of Windows with the power and speed of Linux. No need for expensive hardware. You’ll use VS Code and PowerShell for a smooth experience. Your D code runs fast and has full access to your system.
+3. **Pop!_OS on System76 hardware** (recommended):
+   - Comes pre-installed and ready to go. Just set up VS Code and D tools.
+4. **macOS on M4 Mini** (recommended):
+   - Simple setup: install VS Code and D tools, and you’re ready.
+
+Most examples and videos will use Windows 11 with WSL (Ubuntu), as it’s the easiest for recording and editing.
+
+## 3. How to Work Through Each Lesson
+For each lesson, follow these steps in order. Move to the next lesson only when you feel confident with the current step: 
+
+1. Read the assigned pages from the book _Programming in D_
+   a. Ali Çehreli, author of _Programming in D_, has done a masterful job in his book.  There are some new features, and some  legacy code that no longer works.
+   b. I have taken his code snippets and brought them to life.  As a newbie to D, you get full working examples, except when they intentionally fail so you can learn from error messages.
+2. Read the README for that lesson and/or Debug and experiment with the D project code
+3. Watch the video and follow along (*monkey-see, monkey-do*).
+
+Experienced developers may move quickly, focusing on the book and code, and only watching videos when needed. Beginners should go through all steps at first, then adapt as they gain confidence.
+
+No one is expected to watch every video—use the resources that best fit your learning style. All videos are available if you need them. Enjoy the journey!
+
